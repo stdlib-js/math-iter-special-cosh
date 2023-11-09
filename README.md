@@ -45,38 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-iter-special-cosh
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-iterCosh = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-cosh@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var iterCosh = require( 'path/to/vendor/umd/math-iter-special-cosh/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-cosh@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.iterCosh;
-})();
-</script>
+var iterCosh = require( '@stdlib/math-iter-special-cosh' );
 ```
 
 #### iterCosh( iterator )
@@ -128,14 +120,9 @@ The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-special-cosh@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var uniform = require( '@stdlib/random-iter-uniform' );
+var iterCosh = require( '@stdlib/math-iter-special-cosh' );
 
 // Create a seeded iterator for generating pseudorandom numbers:
 var rand = uniform( -5.0, 5.0, {
@@ -155,11 +142,6 @@ while ( true ) {
     }
     console.log( v.value );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -182,7 +164,7 @@ while ( true ) {
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/math-base/special/cosh`][@stdlib/math/base/special/cosh]</span><span class="delimiter">: </span><span class="description">compute the hyperbolic cosine of a number.</span>
+-   <span class="package-name">[`@stdlib/math-base/special/cosh`][@stdlib/math/base/special/cosh]</span><span class="delimiter">: </span><span class="description">compute the hyperbolic cosine of a double-precision floating-point number.</span>
 -   <span class="package-name">[`@stdlib/math-iter/special/cos`][@stdlib/math/iter/special/cos]</span><span class="delimiter">: </span><span class="description">create an iterator which computes the cosine of each iterated value.</span>
 -   <span class="package-name">[`@stdlib/math-iter/special/sinh`][@stdlib/math/iter/special/sinh]</span><span class="delimiter">: </span><span class="description">create an iterator which evaluates the hyperbolic sine for each iterated value.</span>
 -   <span class="package-name">[`@stdlib/math-iter/special/tanh`][@stdlib/math/iter/special/tanh]</span><span class="delimiter">: </span><span class="description">create an iterator which evaluates the hyperbolic tangent for each iterated value.</span>
@@ -264,13 +246,13 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/cosh]: https://github.com/stdlib-js/math-base-special-cosh/tree/umd
+[@stdlib/math/base/special/cosh]: https://github.com/stdlib-js/math-base-special-cosh
 
-[@stdlib/math/iter/special/cos]: https://github.com/stdlib-js/math-iter-special-cos/tree/umd
+[@stdlib/math/iter/special/cos]: https://github.com/stdlib-js/math-iter-special-cos
 
-[@stdlib/math/iter/special/sinh]: https://github.com/stdlib-js/math-iter-special-sinh/tree/umd
+[@stdlib/math/iter/special/sinh]: https://github.com/stdlib-js/math-iter-special-sinh
 
-[@stdlib/math/iter/special/tanh]: https://github.com/stdlib-js/math-iter-special-tanh/tree/umd
+[@stdlib/math/iter/special/tanh]: https://github.com/stdlib-js/math-iter-special-tanh
 
 <!-- </related-links> -->
 
